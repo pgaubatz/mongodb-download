@@ -107,7 +107,7 @@ module.exports = function (opts, cb) {
 				}
 			} else if ( /debian/i.test(os.dist) ) {
 				name += "-suse";
-				if ( /^7/.test(os.release) ) {
+				if ( /^7/.test(os.release) || /^8/.test(os.release) ) {
 					name += "71";
 				} else {
 					throw new Error("unsupported release of Debian");
